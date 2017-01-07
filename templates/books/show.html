@@ -1,10 +1,29 @@
 <h2>{{booksShowCtrl.book.title}}</h2>
 <hr>
-<div class="row">
 	<!-- Here, add the display of the book info,
        the buttons for editing or deleting,
        the form and buttons that will show if you
        click edit. Don't forget that all of those
        buttons and forms will need some angular
        functionality! -->
-</div>
+     <div class="row">
+       <div class="col-md-3 col-xs-12 thumbnail">
+         <img src="{{booksShowCtrl.book.image}}" alt="book image">
+       </div>
+       <div class="col-md-6 col-xs-12 thumbnail">
+         <ul>
+           <li class="list-group-item">
+             <span ng-hide="editing">Author: {{booksShowCtrl.book.author}}</span>
+             <input  ng-show="editing" ng-model="booksShowCtrl.book.author">
+             </li>
+           <li class="list-group-item">
+             <span ng-hide="editing">Release Date: {{booksShowCtrl.book.releaseDate}}</li></span>
+             <input  ng-show="editing" ng-model="booksShowCtrl.book.releaseDate ">
+
+         </ul>
+         <button class="btn btn btn-default" ng-click="editing = true" ng-hide="editing" >edit</button>
+         <button class="btn btn-success" ng-click="booksShowCtrl.editBook(booksShowCtrl.book); editing =false" ng-show="editing">save</button>
+         <button class="btn btn-default" ng-click="booksShowCtrl.deleteBook(book)">delete</button>
+
+       </div>
+   </div>
