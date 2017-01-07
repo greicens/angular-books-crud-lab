@@ -5,15 +5,9 @@
          <img ng-src="{{booksShowCtrl.book.image}}" class="img-responsive" alt="book image">
        </div>
        <div class="col-md-6 col-xs-12">
-         <ul>
-           <li class="list-group-item">
              <p><strong>Author: </strong>{{booksShowCtrl.book.author}}</p>
-             </li>
-           <li class="list-group-item">
              <p><strong>Release Date:</strong> {{booksShowCtrl.book.releaseDate}}</p>
-          </li>
 
-         </ul>
          <button class="btn btn btn-default" ng-click="editing = true" >edit
            <span class="glyphicon glyphicon-pencil"></span>
          </button>
@@ -25,7 +19,7 @@
          <p><input  ng-show="editing" ng-model="booksShowCtrl.book.image"></p>
          <p><input  ng-show="editing" ng-model="booksShowCtrl.book.releaseDate"></p>
 
-         <button class="btn btn-default" ng-click="booksShowCtrl.editBook(booksShowCtrl.book); editing =false" ng-show="editing">update book</button>
+         <button class="btn btn-default" ng-click="booksShowCtrl.editBook(booksShowCtrl.book); editing =false" ng-show="editing">Update Book</button>
 
        </div>
    </div>
