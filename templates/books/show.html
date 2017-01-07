@@ -13,17 +13,20 @@
        <div class="col-md-6 col-xs-12 thumbnail">
          <ul>
            <li class="list-group-item">
-             <span ng-hide="editing">Author: {{booksShowCtrl.book.author}}</span>
-             <input  ng-show="editing" ng-model="booksShowCtrl.book.author">
+             <span >Author: {{booksShowCtrl.book.author}}</span>
              </li>
            <li class="list-group-item">
-             <span ng-hide="editing">Release Date: {{booksShowCtrl.book.releaseDate}}</li></span>
-             <input  ng-show="editing" ng-model="booksShowCtrl.book.releaseDate ">
+             <span >Release Date: {{booksShowCtrl.book.releaseDate}}</li></span>
 
          </ul>
-         <button class="btn btn btn-default" ng-click="editing = true" ng-hide="editing" >edit</button>
-         <button class="btn btn-success" ng-click="booksShowCtrl.editBook(booksShowCtrl.book); editing =false" ng-show="editing">save</button>
+         <button class="btn btn btn-default" ng-click="editing = true" >edit</button>
          <button class="btn btn-default" ng-click="booksShowCtrl.deleteBook(book)">delete</button>
+         <p><input  ng-show="editing" ng-model="booksShowCtrl.book.title"></p>
+         <p><input  ng-show="editing" ng-model="booksShowCtrl.book.author"></p>
+         <p><input  ng-show="editing" ng-model="booksShowCtrl.book.image"></p>
+         <p><input  ng-show="editing" ng-model="booksShowCtrl.book.releaseDate"></p>
+
+         <button class="btn btn-success" ng-click="booksShowCtrl.editBook(booksShowCtrl.book); editing =false" ng-show="editing">save</button>
 
        </div>
    </div>
