@@ -7,9 +7,9 @@ angular.module('libraryApp')
 BooksShowController.$inject=['$http','$routeParams', '$location'];
 function BooksShowController($http, $routeParams, $location) {
   var vm = this;
-  console.log(vm, "this is vm")
   var bookId = $routeParams.id;
-  console.log(bookId)
+  vm.newBook = {};
+
   $http({
     method: 'GET',
     url: 'https://super-crud.herokuapp.com/books/'+ bookId
