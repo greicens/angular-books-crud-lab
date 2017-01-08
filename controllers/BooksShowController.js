@@ -9,6 +9,7 @@ function BooksShowController($http, $routeParams, $location) {
   var vm = this;
   var bookId = $routeParams.id;
   vm.newBook = {};
+  vm.bookCopy = {};
 
   $http({
     method: 'GET',
@@ -16,6 +17,7 @@ function BooksShowController($http, $routeParams, $location) {
   }).then(function successCallback(response) {
     console.log("Hitting Get Success on BooksShowController", response.data);
     vm.book = response.data;
+    vm.bookCopy = angular.copy(vm.book);
   }, function errorCallback(response) {
     console.log('There was an error getting the data', response);
 
@@ -36,7 +38,7 @@ function BooksShowController($http, $routeParams, $location) {
   }
 
   vm.editBook = function (book){
-    console.log(book);
+    console.log(book, "book passed to edit form");
     // console.log(bookId, "id edit function");
     $http({
       method: 'PUT',
@@ -44,12 +46,17 @@ function BooksShowController($http, $routeParams, $location) {
       data: book
 
     }).then(function editSucess(editBook){
-      console.log(editBook)
-      console.log(editBook.data, "this is the edit book");
       vm.book = editBook.data;
 
     }), function editError (response){
       console.log("ERROR!", response);
     }
+  }
+
+  vm.resetForm = function (){
+    var bookId = $routeParams.id
+    console.log(vm.bookCopy, "this is the bookCopy inside resetForm");
+    vm.book = vm.bookCopy;
+    $location.path('/books/' + bookId);
   }
 }

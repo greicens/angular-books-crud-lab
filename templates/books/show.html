@@ -5,21 +5,25 @@
          <img ng-src="{{booksShowCtrl.book.image}}" class="img-responsive" alt="book image">
        </div>
        <div class="col-md-6 col-xs-12">
-             <p><strong>Author: </strong>{{booksShowCtrl.book.author}}</p>
-             <p><strong>Release Date:</strong> {{booksShowCtrl.book.releaseDate}}</p>
-
+         <p><strong>Author: </strong>{{booksShowCtrl.book.author}}</p>
+         <p><strong>Release Date:</strong> {{booksShowCtrl.book.releaseDate}}</p>
          <button class="btn btn btn-default" ng-click="editing = true" >edit
            <span class="glyphicon glyphicon-pencil"></span>
          </button>
          <button class="btn btn-default" ng-click="booksShowCtrl.deleteBook(book)">delete
            <span class="glyphicon glyphicon-trash"></span>
          </button>
+         <hr>
+         <form name="editForm" ng-submit="booksIndexCtrl.editBook()">
+
          <p><input  ng-show="editing" ng-model="booksShowCtrl.book.title"></p>
          <p><input  ng-show="editing" ng-model="booksShowCtrl.book.author"></p>
          <p><input  ng-show="editing" ng-model="booksShowCtrl.book.image"></p>
          <p><input  ng-show="editing" ng-model="booksShowCtrl.book.releaseDate"></p>
 
-         <button class="btn btn-default" ng-click="booksShowCtrl.editBook(booksShowCtrl.book); editing =false" ng-show="editing">Update Book</button>
+         <button class="btn btn-default" ng-click="booksShowCtrl.editBook(booksShowCtrl.book); editing =false" ng-show="editing">save changes</button>
+         <button class="btn btn-default" ng-click="booksShowCtrl.resetForm(); editing =false" ng-show="editing">cancel</button>
+       </form>
 
        </div>
    </div>

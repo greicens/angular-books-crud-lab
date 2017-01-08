@@ -1,47 +1,43 @@
 <h2>Library Books</h2>
 <form class="form-horizontal" ng-submit="booksIndexCtrl.createBook()">
-<fieldset>
+  <fieldset>
 
   <!-- Form Name -->
-  <legend>Add New Book</legend>
+    <legend>Add New Book</legend>
 
-  <!-- Text input-->
-  <div class="form-group">
-    <label class="col-md-4 control-label">Book Title</label>
-    <div class="col-md-4">
-    <input ng-model="booksIndexCtrl.newBook.title" type="text" class="form-control input-md" required="">
+    <!-- Text input-->
+    <div class="form-group">
+      <label class="col-md-4 control-label">Book Title</label>
+      <div class="col-md-4">
+      <input ng-model="booksIndexCtrl.newBook.title" type="text" class="form-control input-md" required="">
+      </div>
     </div>
-  </div>
-  <div class="form-group">
-    <label class="col-md-4 control-label">Book Author</label>
-    <div class="col-md-4">
-    <input ng-model="booksIndexCtrl.newBook.author" type="text" class="form-control input-md" required="">
+    <div class="form-group">
+      <label class="col-md-4 control-label">Book Author</label>
+      <div class="col-md-4">
+      <input ng-model="booksIndexCtrl.newBook.author" type="text" class="form-control input-md" required="">
+      </div>
     </div>
-  </div>
-  <div class="form-group">
-    <label class="col-md-4 control-label">Book Image</label>
-    <div class="col-md-4">
-    <input ng-model="booksIndexCtrl.newBook.image" type="text" class="form-control input-md" placeholder="image url" required="">
+    <div class="form-group">
+      <label class="col-md-4 control-label">Book Image</label>
+      <div class="col-md-4">
+      <input ng-model="booksIndexCtrl.newBook.image" type="text" class="form-control input-md" placeholder="image url" required="">
+      </div>
     </div>
-  </div>
-  <div class="form-group">
-    <label class="col-md-4 control-label">Release Date</label>
-    <div class="col-md-4">
-    <input ng-model="booksIndexCtrl.newBook.releaseDate" type="text" class="form-control input-md" required="">
+    <div class="form-group">
+      <label class="col-md-4 control-label">Release Date</label>
+      <div class="col-md-4">
+      <input ng-model="booksIndexCtrl.newBook.releaseDate" type="text" class="form-control input-md" required="">
+      </div>
     </div>
-  </div>
-  <!-- Button -->
-  <div class="form-group">
-    <label class="col-md-4 control-label">Save Book</label>
-    <div class="col-md-4">
-      <button class="btn btn-primary">Submit</button>
+    <!-- Button -->
+    <div class="form-group">
+      <label class="col-md-4 control-label">Save Book</label>
+      <div class="col-md-4">
+        <button class="btn btn-primary">Submit</button>
+      </div>
     </div>
-  </div>
-</fieldset>
-
-
-
-
+  </fieldset>
 </form>
 <input type="text" class="form-control" ng-model="searchText" placeholder="Search Books">
 <div ng-repeat="book in booksIndexCtrl.books | orderBy: 'title' | filter: searchText">
