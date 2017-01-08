@@ -1,3 +1,7 @@
+### My Thoughts About The This training
+
+It was interesting to work on the front end without knowing the backend. Writing accessing the RESTful routes with $http was very intuitive. It was more difficult linking the pages within the book API using angular. Overall Angular made the job a lot easier.
+
 # <img src="https://cloud.githubusercontent.com/assets/7833470/10899314/63829980-8188-11e5-8cdd-4ded5bcb6e36.png" height="60"> Angular Book App
 
 You're on the starter-wdi34 branch! These instructions are for WDI34!
@@ -60,7 +64,7 @@ The `solutions` branch has a fully built-out application that meets all the expe
 
 * The books API is set up with RESTful routes, so follow RESTful routing conventions.  You can test endpoints with Postman or cURL, or by setting up a simple request to trigger them.
 * Look at (`console.log`) the data you get back from each `$http` request!
-* If you want to change the page url from within a controller, you'll have to interact with the routing setup a little. Inject the [`$location`](https://docs.angularjs.org/api/ng/service/$location) service into your controller, and use its `path` method. You will probably want to do this with the BooksShowController, so `$location` is included there. 
+* If you want to change the page url from within a controller, you'll have to interact with the routing setup a little. Inject the [`$location`](https://docs.angularjs.org/api/ng/service/$location) service into your controller, and use its `path` method. You will probably want to do this with the BooksShowController, so `$location` is included there.
 
     * <details><summary>click for example</summary>  
 
@@ -74,4 +78,4 @@ The `solutions` branch has a fully built-out application that meets all the expe
 
 2. **Allow the user to edit the book image:** allow the user to change the URL for the book image.
 3. **Add filters to organize the books index page:** add a search bar to filter the books by your search, or buttons to sort them alphabetically by author name or book title.
-1. **Allow the user to add a book:** add a form on the index page that lets a user enter information for a new book.  Read the [super CRUD API documentation](https://github.com/SF-WDI-LABS/super-crud-api) documentation or code to see what fields you need to send in the request body. 
+1. **Allow the user to add a book:** add a form on the index page that lets a user enter information for a new book.  Read the [super CRUD API documentation](https://github.com/SF-WDI-LABS/super-crud-api) documentation or code to see what fields you need to send in the request body.
