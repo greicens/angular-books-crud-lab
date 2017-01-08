@@ -2,6 +2,8 @@
 
 It was interesting to work on the front end without knowing the backend. Writing accessing the RESTful routes with $http was very intuitive. It was more difficult linking the pages within the book API using angular. Overall Angular made the job a lot easier.
 
+### [Link to my Gist with steps to create an agular app from scratch](https://gist.github.com/greicens/277d037b1397699491aa47d5b4e70ce2)
+
 # <img src="https://cloud.githubusercontent.com/assets/7833470/10899314/63829980-8188-11e5-8cdd-4ded5bcb6e36.png" height="60"> Angular Book App
 
 You're on the starter-wdi34 branch! These instructions are for WDI34!
