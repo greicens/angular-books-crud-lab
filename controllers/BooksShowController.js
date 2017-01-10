@@ -9,7 +9,6 @@ function BooksShowController($http, $routeParams, $location) {
   var vm = this;
   var bookId = $routeParams.id;
   vm.newBook = {};
-  vm.bookCopy = {};
 
   $http({
     method: 'GET',
@@ -17,7 +16,7 @@ function BooksShowController($http, $routeParams, $location) {
   }).then(function successCallback(response) {
     console.log("Hitting Get Success on BooksShowController", response.data);
     vm.book = response.data;
-    vm.bookCopy = angular.copy(vm.book);
+    vm.newBook = angular.copy(vm.book);
   }, function errorCallback(response) {
     console.log('There was an error getting the data', response);
 
@@ -46,6 +45,7 @@ function BooksShowController($http, $routeParams, $location) {
       data: book
 
     }).then(function editSucess(editBook){
+      console.log(editBook, " edit Book")
       vm.book = editBook.data;
 
     }), function editError (response){

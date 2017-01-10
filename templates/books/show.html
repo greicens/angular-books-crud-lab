@@ -16,12 +16,12 @@
          <hr>
          <form name="editForm" ng-submit="booksIndexCtrl.editBook()">
 
-         <p><input  ng-show="editing" ng-model="booksShowCtrl.book.title"></p>
-         <p><input  ng-show="editing" ng-model="booksShowCtrl.book.author"></p>
-         <p><input  ng-show="editing" ng-model="booksShowCtrl.book.image"></p>
-         <p><input  ng-show="editing" ng-model="booksShowCtrl.book.releaseDate"></p>
+         <p><input  ng-show="editing" ng-model="booksShowCtrl.newBook.title"></p>
+         <p><input  ng-show="editing" ng-model="booksShowCtrl.newBook.author"></p>
+         <p><input  ng-show="editing" ng-model="booksShowCtrl.newBook.image"></p>
+         <p><input  ng-show="editing" ng-model="booksShowCtrl.newBook.releaseDate"></p>
 
-         <button class="btn btn-default" ng-click="booksShowCtrl.editBook(booksShowCtrl.book); editing =false" ng-show="editing">save changes</button>
+         <button class="btn btn-default" ng-click="booksShowCtrl.editBook(booksShowCtrl.newBook); editing =false" ng-show="editing">save changes</button>
          <button class="btn btn-default" ng-click="booksShowCtrl.book; editing =false" ng-show="editing">cancel</button>
        </form>
 

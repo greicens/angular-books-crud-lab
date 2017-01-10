@@ -1,5 +1,5 @@
 angular.module('libraryApp')
-  .controller('AboutController', AboutController);
+  .controller('AboutController', aboutController);
 
 aboutController.$inject = [];
 
